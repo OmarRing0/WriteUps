@@ -23,7 +23,7 @@ Please enter ur login:
 
 No explicit failure message appeared, but that doesn't mean there aren't success checks hidden inside.
 
-I started searching for the string `"good"`, which led me to the main function. But what if the author used `"correct"` instead of `"good"`? I decided to search for something guaranteed to exist in the flow: `"login"`.
+I started searching for the string `"good"`, which led me to the main function. But what if the author used `"correct"` instead of `"good"`? I decided to search for something guaranteed to exist in the code which we found on startup: `"login"`.
 
 Searching for `"login"` gave 4 results. Ignoring the global references and focusing on the actual function call, I found where the prompt happens.
 
@@ -131,10 +131,21 @@ To bypass these checks entirely without entering credentials:
    ```
 
 2. Replace `JNZ` (`75 19`) with `NOP` instructions (`90 90`).
-3. Repeat for the login check conditional jump at `140001396` (`0F 85 86 00 00 00` → `NOP` x 6).
+3. Repeat for the login check conditional jump at `140001396` (`0F 85 86 00 00 00` → `NOP` x 6). 
+4-Their is also other conditions but the steps remain the same
+We end up with a fixed code:
+```c
+  sVar7 = local_38;
+  memcmp(EnteredPassword,local_70,local_38);
+  PrintChar((basic_ostream<> *)cout_exref,"Please enter ur password: \n");
+  InputLong((basic_istream<> *)cin_exref,(longlong *)&local_68,sVar7);
+  uVar3 = local_50;
+  pvVar2 = local_68;
+  PrintChar((basic_ostream<> *)cout_exref,"Nice job bro ");
+  ```
 
 This forces execution directly to `"Nice job bro "` regardless of input.
 
 ---
-
+that's nice job bro
 See you next time ;)
