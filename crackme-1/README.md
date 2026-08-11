@@ -28,6 +28,7 @@ I started searching for the string `"good"`, which led me to the main function. 
 Searching for `"login"` gave 4 results. Ignoring the global references and focusing on the actual function call, I found where the prompt happens.
 
 ![Search results for the string "login" in Ghidra](images/01-string-search-login.png)
+
 *Search results for the string "login" in Ghidra.*
 
 ---
@@ -40,6 +41,7 @@ While analyzing the execution flow, I identified two key wrapper functions and r
 - `FUN_140001850` → **`InputLong`** (handles `std::cin` input)
 
 ![Decompiled view showing the login prompt call site](images/02-decompiled-login-prompt.png)
+
 *Decompiled view showing the login prompt call site.*
 
 ---
@@ -105,9 +107,11 @@ builtin_strncpy(ActualPassword, "qwerty", 7);
 ```
 
 ![Function signature and stack layout for FUN_140001630](images/03-function-signature-printchar.png)
+
 *Function signature and stack layout for FUN_140001630 (PrintChar).*
 
 ![Cross-references to FUN_140001630 confirming its usage as an output wrapper](images/04-xrefs-printchar.png)
+
 *Cross-references to FUN_140001630 confirming its usage as an output wrapper.*
 
 ### Credentials Found
@@ -131,7 +135,8 @@ To bypass these checks entirely without entering credentials:
    ```
 
 2. Replace `JNZ` (`75 19`) with `NOP` instructions (`90 90`).
-3. Repeat for the login check conditional jump at `140001396` (`0F 85 86 00 00 00` → `NOP` x 6). 
+3. Repeat for the login check conditional jump at `140001396` (`0F 85 86 00 00 00` → `NOP` x 6).
+
 4-Their is also other conditions but the steps remain the same
 We end up with a fixed code:
 ```c
