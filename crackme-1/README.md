@@ -152,5 +152,5 @@ We end up with a fixed code:
 This forces execution directly to `"Nice job bro "` regardless of input.
 
 ---
-that's nice job bro
+that's a nice job I guess
 See you next time ;)
