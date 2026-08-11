@@ -137,4 +137,4 @@ This forces execution directly to `"Nice job bro "` regardless of input.
 
 ---
 
-*Writeup by whekkees.*
+See you next time ;)
