@@ -58,7 +58,7 @@ Entering the name alone doesn't trigger any validation errors, but the program o
 
 Opening the executable in Ghidra, searching for the word `"access"` quickly reveals the core logic path, including `\nACCESS GRANTED!` at assembly address `140001cc0`:
 
-![Search results for the string "ACCESS" in Ghidra](images/01-string-search-access.png)
+![Search results for the string "ACCESS" in Ghidra](Images/01-string-search-access.png)
 *Search results for the string "ACCESS" in Ghidra.*
 
 ```asm
@@ -67,7 +67,7 @@ Opening the executable in Ghidra, searching for the word `"access"` quickly reve
 140001cc7 48 8b 05 22 4d 00 00 MOV   RAX, qword ptr [->_ZSt4cout]
 ```
 
-![Disassembly showing the JNZ leading to the ACCESS GRANTED string](images/02-access-granted-asm.png)
+![Disassembly showing the JNZ leading to the ACCESS GRANTED string](Images/02-access-granted-asm.png)
 *Disassembly showing the JNZ leading to the ACCESS GRANTED string.*
 
 Tracing back to the main function decompilation:
@@ -79,7 +79,7 @@ std::getline<>((istream *)&_ZSt3cin, local_298);
 uVar2 = std::__cxx11::string::empty(local_298);
 ```
 
-![Start of main decompilation with the intro strings and name prompt](images/03-main-decompile-intro.png)
+![Start of main decompilation with the intro strings and name prompt](Images/03-main-decompile-intro.png)
 *Start of main decompilation with the intro strings and name prompt.*
 
 Since `std::getline` reads our input string into `local_298`, renaming `local_298` to **`UserName`** clarifies the rest of the routine.
@@ -103,7 +103,7 @@ if ((char)uVar2 == '\0') {
 }
 ```
 
-![Call site of calculate_soul_weight and the soul weight output](images/04-soul-weight-call.png)
+![Call site of calculate_soul_weight and the soul weight output](Images/04-soul-weight-call.png)
 *Call site of calculate_soul_weight and the soul weight output.*
 
 Renaming `local_1c` to **`CalculatedWeight`** and looking inside `calculate_soul_weight()`:
@@ -127,7 +127,7 @@ int calculate_soul_weight(string *param_1) {
 }
 ```
 
-![Decompiled body of calculate_soul_weight](images/05-calculate-soul-weight-func.png)
+![Decompiled body of calculate_soul_weight](Images/05-calculate-soul-weight-func.png)
 *Decompiled body of calculate_soul_weight.*
 
 ### Routine Breakdown:
@@ -164,7 +164,7 @@ if (local_30 == UserPassword) {
 }
 ```
 
-![Verification logic comparing calculated password against user input](images/06-password-verification-logic.png)
+![Verification logic comparing calculated password against user input](Images/06-password-verification-logic.png)
 *Verification logic comparing calculated password against user input.*
 
 Renaming `local_30` to **`ActualPassword`**. The formula evaluates as:
@@ -175,10 +175,10 @@ Where $0\text{xFACE} = 64206$ and $0\text{x7B} = 123$.
 
 At runtime, testing confirms the prompts and flow:
 
-![Runtime prompt showing username and password entry](images/07-runtime-username-password.png)
+![Runtime prompt showing username and password entry](Images/07-runtime-username-password.png)
 *Runtime prompt showing username and password entry.*
 
-![Final comparison instruction (CMP) before the JNZ branch decides pass/fail](images/08-password-cmp-asm.png)
+![Final comparison instruction (CMP) before the JNZ branch decides pass/fail](Images/08-password-cmp-asm.png)
 *Final comparison instruction (CMP) before the JNZ branch decides pass/fail.*
 
 ---
@@ -202,16 +202,6 @@ user = input("Enter username: ")
 print("Generated Access Code:", generate_password(user))
 ```
 
-### Verification:
-
-- Input Name: `Omar`
-- ASCII sum: $79 + 109 + 97 + 114 = 399$
-- Soul Weight: $(399 \times 13) + 7 = 5194$
-- Access Code: $(5194 \oplus 64206) - 123 = 60981 - 123 = 60858$
-
-Entering `60858` unlocks `ACCESS GRANTED!`.
-
----
 
 ## Step 6: Alternative Bypasses
 
