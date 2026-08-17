@@ -121,7 +121,7 @@ Testing with the name `omar` gives `1724`. Feeding that back into the CrackMe as
 
 *Successful run — new ASCII art, still talking trash but this time it's welcoming you in.*
 
-New face, friendlier tone, but still threatening you that it's "not dead yet." Sure — come back anytime, I'll be ready. 😉
+New face, friendlier tone, but still threatening you that it's "not dead yet." Sure — come back anytime,inshallah I'll be ready. 😉
 
 ---
 
@@ -142,5 +142,4 @@ Dynamically, the same result can be reached in x64dbg — either by reading the 
 *x64dbg session — the runtime comparison against the generated value "1724" in memory.*
 
 ---
-
-*Writeup by whekkees.*
+See you next time ;)
