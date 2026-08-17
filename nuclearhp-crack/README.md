@@ -15,7 +15,7 @@
 
 Running the binary immediately throws a bit of ragebait at you — big ASCII art and an obvious "access denied" energy before you've even entered anything real:
 
-![Failed run showing the LOSER DETECTED ASCII art](images/04-loser-detected-ascii.png)
+![Failed run showing the LOSER DETECTED ASCII art](images/01-main-loop-flow.png)
 
 *Failed run — LOSER DETECTED ASCII art.*
 
@@ -39,7 +39,7 @@ generate_password((string *)&user_name[abi:cxx11], (int *)&system_password);
 
 Two parameters go in: the username and the system password. That immediately tells you the password **isn't hardcoded** — it's generated on the fly from whatever name you type. So the real target isn't a string comparison, it's the `generate_password` function itself.
 
-![Main loop showing the generate_password call and the LOSER DETECTED branch](images/01-main-loop-flow.png)
+![Main loop showing the generate_password call and the LOSER DETECTED branch](images/04-loser-detected-ascii.png)
 
 *Main loop — the generate_password call, the password comparison, and the LOSER DETECTED branch.*
 
@@ -88,7 +88,7 @@ But that's not the final answer — one more step:
 
 At the very end, the accumulated sum gets multiplied by the username's length. That's the full formula.
 
-![Decompiled body of generate_password](images/04-loser-detected-ascii.png)
+![Decompiled body of generate_password](images/03-python-keygen-test.png)
 
 *Decompiled body of generate_password — the ASCII sum loop and the final multiplication.*
 
