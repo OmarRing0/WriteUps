@@ -139,7 +139,10 @@ for z in range(10):
     print(key)
 ```
 
-This can generate more passwords than the seconds you've lived in your life. Maybe a turtle reading this is here and not here at the same time (quantum turtle joke).
+This can generate more passwords than the seconds you've lived in your life. or maybe not, a turtle might be readings this
+or a quantum creature? actually a quantum creature is here and not here at the same time
+hey quantum creature hi and bye
+shhh only me and quantum creature understand this
 
 Anyway, the script spits out valid 4-character combinations. You're the one on LSD, not me!
 
@@ -169,6 +172,10 @@ Success.
 - The trap: understanding how `fgets` behaves
 
 **Key Takeaway:**
-The difference between 2.0 and 2.5 difficulty is the little things you miss. The newline wasn't explicitly mentioned in the logic, but it silently affected everything. That's the real test.
+The difference between 2.0 and 2.5 difficulty is the little things you miss. The newline wasn't explicitly mentioned in the logic, but it silently affected everything. I mean if you have the patience and didn't break the keyboard in two pieces
+I for sure wouldn't do that, probably.
 
 Also, Alon Alush has jokes. I respect that.
+not as funny as me for sure but good start
+
+see you next ;)
