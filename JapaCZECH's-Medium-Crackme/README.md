@@ -203,14 +203,8 @@ Couldn't test dynamically due to the anti-debug layers, but the static analysis 
 
 ---
 
-## Analysis Summary
-
-**What made this 2.8:**
-- Three stacked anti-debug layers (IsDebuggerPresent + timing + self-modification)
-- Two-stage credential validation (username then password)
-- XOR encryption on both credentials using the same key (0xaa)
-- Little-endian byte ordering on the hardcoded values
-
-**The key insight:** Anti-debugging only matters if you're running the binary. Static analysis bypasses all three layers entirely — you just read the hardcoded bytes and reverse the XOR. The author built a fortress that static analysis walks straight through.
-
 **Lesson learned:** More anti-debug layers does not equal more secure against static analysis.
+
+
+
+See you next time ;)
