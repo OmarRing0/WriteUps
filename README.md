@@ -10,6 +10,7 @@ Collection of reverse engineering and security writeups.
 - [admin31's cantcrack](./cantcrack-admin31/) — Serial-format keygen with multi-key XOR string decryption (x86-64, Ghidra)
 - [NoOff's LoginCrackme](./NoOff's-LoginCrackme/) — Multi-stage XOR-based password validation with obfuscated lookup arrays (x86-64, Ghidra)
 - [Tut's LSDtrip](./Tut's-LSDtrip/) — Weighted character sum validation with newline trap (x86, Ghidra)
+- [JapaCZECH's Medium Crackme](./JapaCZECH's-Medium-Crackme/) — Triple-layer anti-debug bypass via static analysis, XOR credential decryption (x86, Ghidra)
 ---
 
 *More writeups coming soon.*
