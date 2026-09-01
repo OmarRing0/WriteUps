@@ -201,6 +201,59 @@ Password: shkolk
 
 Couldn't test dynamically due to the anti-debug layers, but the static analysis of the XOR operations is clean and the math checks out.
 
+
+Actually an update, I have patched the main code and succesfully removed debuggers so I can test it
+```
+  local_18 = &_Argc;
+  ___main();
+  local_24 = ___stack_chk_guard;
+  BVar2 = _IsDebuggerPresent@0();
+  _GetTickCount@0();
+  _Sleep@4(10);
+  _GetTickCount@0();
+  self_modify();
+  username = local_4c;
+  local_50 = 0;
+  EnteredPassword = local_34;
+  local_4c[0] = 0;
+  local_38 = 0;
+  local_34[0] = 0;
+  std::operator<<((int *)&std::cout,"Enter username: ");
+  std::operator>>((int *)&std::cin,(string *)&username);
+  std::operator<<((int *)&std::cout,"Enter password: ");
+  std::operator>>((int *)&std::cin,(string *)&EnteredPassword);
+  cVar1 = check_credentials((int *)&username,(string *)&EnteredPassword);
+  if (cVar1 == '\0') {
+    std::__ostream_insert<>((int *)&std::cout,"Access denied!",0xe);
+    std::endl<>((ostream *)&std::cout);
+  }
+  else {
+    std::__ostream_insert<>((int *)&std::cout,"Access granted!",0xf);
+    std::endl<>((ostream *)&std::cout);
+  }
+  if (EnteredPassword != local_34) {
+    operator.delete(EnteredPassword);
+  }
+  if (username != local_4c) {
+    operator.delete(username);
+  }
+  if (local_24 == ___stack_chk_guard) {
+    return BVar2;
+  }
+                    /* WARNING: Subroutine does not return */
+  ___stack_chk_fail();
+}
+```
+
+
+And upon testing it we got
+```
+D:\Reverse inknearing\Solved>NoDebuggerSmain.exe
+Enter username: i`imm
+Enter password: shkolk
+Access granted!
+```
+
 ---
 
 **Lesson learned:** More anti-debug layers does not equal more secure against static analysis.
