@@ -389,39 +389,15 @@ Original: TEST Name, Name
 Patch:    NOP all the conditional checks
           Force return success
 ```
+![Easy patching](images/ezpatch.png)
 
-But honestly? The keygen approach is cleaner. And way more satisfying.
-
----
-
-## Analysis Summary
-
-**Difficulty Assessment:** This is rated 3.3, but honestly?
-
-The secret code algorithm is 2.8-level (weighted sum + XOR + modular arithmetic).
-
-The PIN algorithm is 3.5+ level (advanced hash mixing with bitwise operations, rotations, state swapping).
-
-Overall: **3.2-3.5 difficulty.** The rating feels fair because most people would get stuck on the PIN function and give up.
-
-**Key Insights:**
-- Base-36 encoding of segments
-- Weighted math operations on username
-- Complex hash mixing function (not meant to be reverse-engineered manually)
-- XOR validation pattern
-
-**Why I didn't reverse the PIN function completely:** Because I didn't need to. Once I realized the function takes (username, code) as input, I could just call it directly and get the PIN. That's the real win — knowing WHAT to pass in, not understanding every bitwise operation.
 
 ---
 
 ## Final Message
 
-Dear SirWardrake, you tortured me with this PIN function.
+Dear Math, please leave me alone
 
-But hey, it works. The keygen is complete. The crackme is solved.
 
-And after all of this... it crashes.
+or at least come better prepared next time ;) 
 
-So who cares? 🤷
-
-*P.S. — To anyone reading this: If you fall into the "secret code" spiral loop like I did, just remember: you're not in the fifth dimension. You're just stuck in input validation hell. Ghidra will set you free.*
