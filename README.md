@@ -12,6 +12,7 @@ Collection of reverse engineering and security writeups.
 - [Tut's LSDtrip](./Tut's-LSDtrip/) — Weighted character sum validation with newline trap (x86, Ghidra)
 - [JapaCZECH's Medium Crackme](./JapaCZECH's-Medium-Crackme/) — Triple-layer anti-debug bypass via static analysis, XOR credential decryption (x86, Ghidra)
 - [SirWardrake's KeygenMe_3_SWD](./SirWardrake's-KeygenMe_3_SWD/) — Full keygen implementation with base-36 encoding, weighted math, and complex hash mixing (x86-64, Ghidra)
+- [SirWardrake's Grannys Quest](./SirWardrake's-GrannysQuest/) — 4-day validation chain with Fibonacci keygen and CPU-level exploitation (CDQE, CVTTSD2SI overflow), dead code obfuscation (x86-64, Ghidra)
 ---
 
 *More writeups coming soon.*
