@@ -398,31 +398,5 @@ These are intentional exploits, not accidents.
 You don't need to *run* this binary to solve it. Ghidra decompilation + assembly understanding = complete solution. Dynamic debugging only confirms what you already know.
 
 ---
-
-## Tools & Timeline
-
-- **Static Analysis (Ghidra):** 2.5 hours
-- **Dynamic Validation (x64dbg):** 15 minutes
-- **Writeup:** 1.5 hours
-- **Total:** ~4 hours
-
----
-
-## Lessons for Malware Analysis
-
-Real malware (ransomware, trojans, rootkits) uses these exact techniques:
-
-1. **Dead code obfuscation** (hide real logic in fake computation)
-2. **Sign-extension bugs** (exploit CDQE for stealth)
-3. **Integer overflow** (trigger undefined behavior intentionally)
-4. **Decompiler misdirection** (make static analysis harder)
-
-GrannysQuest is a miniature lesson in professional threat evasion.
-
----
-
-
----
-
 *Thanks to SirWardrake for the well-designed challenge. Damn grandma and her medieval era security...*
 see you next time ;)
