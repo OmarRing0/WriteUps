@@ -16,7 +16,7 @@ GrannysQuest is a 4-day validation chain where Grandma forgot the launch code fo
 
 ## Day 1: Grannys teeth (Birthday Arithmetic)
 
-![Day 1 Start](day1_grandmas_birthday.png)
+![Day 1 Start](images/day1_grandmas_birthday.png)
 
 *The intro sets the tone: help save Grandma's dentures by figuring out her birthday.*
 
