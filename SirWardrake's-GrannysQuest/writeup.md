@@ -32,7 +32,7 @@ The equation looks nasty, but it's just kindergarten math (as Omar puts it).
 
 ### Breaking Down the Equation
 
-![Day 1 Equation Analysis](day1_equation_analysis.png)
+![Day 1 Equation Analysis](images/day1_equation_analysis.png)
 
 Let's calculate:
 
@@ -55,7 +55,7 @@ Actually, looking at the decompiled code more carefully, the real equation simpl
 
 ### The Keygen Function
 
-![Day 1 Keygen Analysis](day1_keygen_function.png)
+![Day 1 Keygen Analysis](images/day1_keygen_function.png)
 
 ```c
 int FUN_140002360(basic_string<> *Input) {
@@ -111,7 +111,7 @@ But wait... that means each digit averages to 326? That's impossible for single 
 
 ## Day 2: Grannys Roller Walker (Manufacturer Mystery)
 
-![Day 2 Walker Wheel Mystery](day2_manufacturer_walker.png)
+![Day 2 Walker Wheel Mystery](images/day2_manufacturer_walker.png)
 
 *Grandma's walker wheel is broken. You need to find who made it by decoding the manufacturer name.*
 
@@ -131,7 +131,7 @@ This is the **expected output after transformation**.
 
 ### The Validation Logic
 
-![Day 2 Validation Code](day2_validation_code.png)
+![Day 2 Validation Code](images/day2_validation_code.png)
 
 ```c
 int operation(basic_string<> *param1) {
@@ -205,13 +205,13 @@ Output: Wobble-Wheels-Unlimited
 
 ✅ **Day 2 Solution: `Wobble-Wheels-Unlimited`**
 
-![Day 2 Data Segment](day2_data_segment.png)
+![Day 2 Data Segment](images/day2_data_segment.png)
 
 ---
 
 ## Day 3: Grannys Autistic Traits (Fibonacci Number Code)
 
-![Day 3 Autistic Traits](day3_grannys_autistic_traits.png)
+![Day 3 Autistic Traits](images/day3_grannys_autistic_traits.png)
 
 *Grandma only remembers things as numbers—specifically, Fibonacci numbers linked to the letters of your name.*
 
@@ -226,7 +226,7 @@ Your crazy number code: [waiting for input]
 
 ### The Fibonacci Generation
 
-![Day 3 Fibonacci Function](day3_fibonacci_function.png)
+![Day 3 Fibonacci Function](images/day3_fibonacci_function.png)
 
 ```c
 int Fib(int param_1) {
@@ -255,13 +255,13 @@ Concatenated: `37714401597`
 
 ✅ **Day 3 Solution for "omar": `37714401597`**
 
-![Day 3 Complete Output](day3_complete_output.png)
+![Day 3 Complete Output](images/day3_complete_output.png)
 
 ---
 
 ## Day 4: The Rocket Launch (PIN Calculation & CPU Exploitation)
 
-![Day 4 Rocket Launch Setup](day4_rocket_launch.png)
+![Day 4 Rocket Launch Setup](images/day4_rocket_launch.png)
 
 *The final day. Grandma has the coordinates and launch code written down. You need to calculate the verification PIN.*
 
@@ -360,7 +360,7 @@ Expected PIN = 0x8000000000000000 XOR (4 * 0x309)
 
 ✅ **Day 4 Solution for "omar": `-9223372036854772700`**
 
-![Day 4 Final Success](day4_final_success.png)
+![Day 4 Final Success](images/day4_final_success.png)
 
 ---
 
@@ -421,11 +421,8 @@ GrannysQuest is a miniature lesson in professional threat evasion.
 
 ---
 
-**Posted:** September 2026  
-**Difficulty:** 3.5/5 (Medium-Hard)  
-**Quality:** 3.7/5 (Well-crafted obfuscation)  
-**Recommendation:** Excellent prep for 4.0+ challenges with cryptography or control-flow flattening
 
 ---
 
 *Thanks to SirWardrake for the well-designed challenge. Damn grandma and her medieval era security...*
+see you next time ;)
