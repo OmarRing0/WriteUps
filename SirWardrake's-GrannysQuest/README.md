@@ -6,7 +6,7 @@
 | **Language** | C/C++ |
 | **Platform** | Windows (x86-64) |
 | **Difficulty** | 3.5 |
-| **Quality** | 3.7 |
+| **Quality** | 4.2 |
 | **Upload Date** | 2026-02-19 |
 | **Labels** | KeyGen, Reversing, CPU Exploitation, Hash Mixing |
 
@@ -14,7 +14,7 @@
 
 ## Day 1: Grannys teeth
 
-![Day 1 Start](day1_grandmas_birthday.png)
+![Day 1 Start](images/day1_grandmas_birthday.png)
 
 Upon starting the crackme we get this message:
 
@@ -31,7 +31,7 @@ if (x1 == ((0x3A24 + 0x79) * 2026.0 - 120739968.0) / 2.0 - (double)(dat + 0x49))
 
 Seems like time for kindergarten math. Ok maybe not kindergarten now let's calculate this equation.
 
-![Equation Analysis](day1_equation_analysis.png)
+![Equation Analysis](images/day1_equation_analysis.png)
 
 `dat = 0x7A`
 
@@ -52,7 +52,7 @@ x1 = (double)iVar1;
 
 It is the return value of this function. Now let's check this function:
 
-![Keygen Function](day1_keygen_function.png)
+![Keygen Function](images/day1_keygen_function.png)
 
 ```c
 int FUN_140002360(basic_string<> *Input) {
@@ -117,7 +117,7 @@ Damn grandma is so old.
 
 ## Day 2: Grannys rollator walker
 
-![Day 2 Walker Wheel](day2_manufacturer_walker.png)
+![Day 2 Walker Wheel](images/day2_manufacturer_walker.png)
 
 Now for day 2:
 
@@ -185,7 +185,7 @@ Amazing that's what we got.
 
 So now we gotta do the math on it to get the correct param. Here's the code:
 
-![Validation Code](day2_validation_code.png)
+![Validation Code](images/day2_validation_code.png)
 
 ```python
 def process(s: str) -> str:
@@ -223,7 +223,7 @@ Amazing correct.
 
 ## Day 3: Grannys autistic traits and what numbers have to do with them
 
-![Day 3 Setup](day3_grannys_autistic_traits.png)
+![Day 3 Setup](images/day3_grannys_autistic_traits.png)
 
 "As you know, Grandma's a little on the autistic side... Which means she only remembers things on names once she turned them into numbers.
 She's forgotten your name again... So better start calculating before she gives you a new one!"
@@ -277,7 +277,7 @@ So just like previous day we just take input and compare it with the calculated 
 
 We just do lowercase on name and fibonacci.
 
-![Fibonacci Function](day3_fibonacci_function.png)
+![Fibonacci Function](images/day3_fibonacci_function.png)
 
 ```python
 def fib(n):
@@ -308,7 +308,7 @@ Name: omar
 Key:  37714401597
 ```
 
-![Complete Output](day3_complete_output.png)
+![Complete Output](images/day3_complete_output.png)
 
 ✅ **Day 3 Solution for "omar": `37714401597`**
 
@@ -316,7 +316,7 @@ Key:  37714401597
 
 ## Day 4: The Rocket Launch
 
-![Day 4 Setup](day4_rocket_launch.png)
+![Day 4 Setup](images/day4_rocket_launch.png)
 
 Grandma's got a problem: Her wicked daughters, your oh-so-charming aunts, have stashed a lot of cash, time to dump her in a nursing home. Needless to say, Grandma strongly disagrees. But don't worry, she's got a plan: Down in the basement, she's still got that old rocket her long-dead husband smuggled home from Vietnam. It's ancient, sure, but probably still works. The only snag? She's forgotten the launch code, not shocking considering she's older than the Jurassic era.
 
@@ -475,7 +475,7 @@ As a signed 64-bit integer:
 
 PIN: `-9223372036854772700`
 
-![Final Success](day4_final_success.png)
+![Final Success](images/day4_final_success.png)
 
 ✅ **Day 4 Solution for "omar": `-9223372036854772700`**
 
