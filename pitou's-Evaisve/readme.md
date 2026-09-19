@@ -1,3 +1,15 @@
+| | |
+|---|---|
+| **Author (of CrackMe)** | [Pitou](https://crackmes.one/user/pitou) |
+| **Language** | C/C++ |
+| **Platform** | Windows (x86-64) |
+| **Difficulty** | 3.0 |
+| **Quality** | 5.2 |
+| **Upload Date** | 2026-05-06 |
+| **Labels** | String / data encryption, XOR , Packer, Other named(Morphine/Neolite/PEtite…)|
+
+---
+
 omar far from home, and today we tackle an evasive exe.
 
 for once i felt like my beloved dragon ghidra was completely useless, so time to bring out the bug: x64dbg. i don't think this exe was even made to run properly, it was just made to hide a flag. 
