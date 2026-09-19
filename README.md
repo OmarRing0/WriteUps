@@ -13,6 +13,7 @@ Collection of reverse engineering and security writeups.
 - [JapaCZECH's Medium Crackme](./JapaCZECH's-Medium-Crackme/) — Triple-layer anti-debug bypass via static analysis, XOR credential decryption (x86, Ghidra)
 - [SirWardrake's KeygenMe_3_SWD](./SirWardrake's-KeygenMe_3_SWD/) — Full keygen implementation with base-36 encoding, weighted math, and complex hash mixing (x86-64, Ghidra)
 - [SirWardrake's Grannys Quest](./SirWardrake's-GrannysQuest/) — 4-day validation chain with Fibonacci keygen and CPU-level exploitation (CDQE, CVTTSD2SI overflow), dead code obfuscation (x86-64, Ghidra)
+- [Pitou's Evaisve](./pitou's-Evaisve/) — Packed binary unpacking via VirtualProtect hooking, XOR decryption loop, CRT initialization analysis, flag extraction from obfuscated stack array (x64dbg, PE analysis)
 ---
 
 *More writeups coming soon.*
