@@ -14,6 +14,7 @@ Collection of reverse engineering and security writeups.
 - [SirWardrake's KeygenMe_3_SWD](./SirWardrake's-KeygenMe_3_SWD/) — Full keygen implementation with base-36 encoding, weighted math, and complex hash mixing (x86-64, Ghidra)
 - [SirWardrake's Grannys Quest](./SirWardrake's-GrannysQuest/) — 4-day validation chain with Fibonacci keygen and CPU-level exploitation (CDQE, CVTTSD2SI overflow), dead code obfuscation (x86-64, Ghidra)
 - [Pitou's Evaisve](./pitou's-Evaisve/) — Packed binary unpacking via VirtualProtect hooking, XOR decryption loop, CRT initialization analysis, flag extraction from obfuscated stack array (x64dbg, PE analysis)
+- [niko122's Impossible Console Crack Me](./niko122's-impossible-console-crack-me/) — rdtsc timing anti-debug, runtime-decrypted code region (packer, XOR, string/data encryption), anti-tamper checks, CRT startup tracing to find main, inline std::string password comparison (x64dbg, x86-64)
 ---
 
 *More writeups coming soon.*
