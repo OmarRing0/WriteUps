@@ -1,7 +1,6 @@
 # niko122's impossible console crack me
 
-🔗 **Link:** [crackmes.one](https://crackmes.one/) <!-- replace with the direct crackme page URL -->
-
+🔗 **Link:** [crackmes.one](https://crackmes.one/crackme/69a1280d0b6d36e727710a97)
 | | |
 |---|---|
 | **Author** | niko122 |
@@ -19,6 +18,7 @@
 Welcome to a new day of learning how to walk in reverse engineering.
 
 If you're a rookie dealing with anti-tamper, anti-debugging, string obfuscation and packers, welcome, rookie.
+Seems like you're not the only rookie here I guess
 
 ## First Contact
 
@@ -35,7 +35,7 @@ What a surprise.
 
 ## Sizing It Up
 
-Upon analyzing the section sizes of crackmeh, we see that `.text` (0x8000) is bigger than `.rdata` (0x4000) and `.rsrc` (0x1000). Hmm, interesting when dealing with packers.
+Upon analyzing the section sizes of crackmeh, we see that `.text` (0x8000) is bigger than `.rdata` (0x4000) and `.rsrc` (0x1000). Hmm, interesting when dealing with packers it shouldn't be like this.
 
 ![Memory map sections](images/1000418221.jpg)
 
