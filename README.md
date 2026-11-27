@@ -15,6 +15,7 @@ Collection of reverse engineering and security writeups.
 - [SirWardrake's Grannys Quest](./SirWardrake's-GrannysQuest/) — 4-day validation chain with Fibonacci keygen and CPU-level exploitation (CDQE, CVTTSD2SI overflow), dead code obfuscation (x86-64, Ghidra)
 - [Pitou's Evaisve](./pitou's-Evaisve/) — Packed binary unpacking via VirtualProtect hooking, XOR decryption loop, CRT initialization analysis, flag extraction from obfuscated stack array (x64dbg, PE analysis)
 - [niko122's Impossible Console Crack Me](./niko122's-impossible-console-crack-me/crackmeh_writeup.md) — rdtsc timing anti-debug, runtime-decrypted code region (packer, XOR, string/data encryption), anti-tamper checks, CRT startup tracing to find main, inline std::string password comparison (x64dbg, x86-64)
+- [Mobile Game Teardown](./MobileGamer-Teardown/) — Android game security teardown: merging split APKs, unpacking with APKEditor, spotting Pairip anti-tamper, and finding an unencrypted Godot 4 PCK with the whole economy in plaintext JSON and readable GDScript bytecode, plus a client-side trust and mitigation breakdown (Android, Godot, Ghidra, APKEditor)
 ---
 
 *More writeups coming soon.*
